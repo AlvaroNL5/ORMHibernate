@@ -1,0 +1,18 @@
+<hibernate-configuration>
+    <session-factory>
+        <!-- Configuración de conexión a PostgreSQL -->
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5433/tierramedia</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">DiosPutaContrasenaDeLosCojones</property>
+        <!-- Dialecto de PostgreSQL -->
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL10Dialect</property>
+        <!-- Configuración de Hibernate -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+        <!-- Mapeo de clases -->
+        <mapping class="model.Raza"/>
+        <mapping class="model.Personaje"/>
+    </session-factory>
+</hibernate-configuration>
